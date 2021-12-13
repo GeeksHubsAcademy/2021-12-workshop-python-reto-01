@@ -1,9 +1,10 @@
 language: python
+sudo: false
 dist: trusty
 cache: false
 python:
- - "3.6"
+ - 3.6
 install: 
  - pip install -e .
  - git submodule update --init --recursive
-script: pytest
+script: py.test -v
